@@ -38,3 +38,39 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 3. Selecione **Revisar + criar** e, depois de ver a resposta **Êxito da validação**, selecione **Criar**.
 
 4. Após a conclusão da implantação, selecione **Ir para o recurso**. Na página de visão geral da Pesquisa de IA do Azure, você pode adicionar índices, importar dados e pesquisar índices criados.
+
+## Criar um recurso de serviços de IA do Azure
+
+Você precisará provisionar um recurso **de serviços de IA do Azure** que esteja no mesmo local que seu recurso de Pesquisa de IA do Azure. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
+
+1. Retorne à home page do portal do Azure. Clique no botão **+Criar um recurso** e procure serviços de IA do Azure. Selecione **criar** um plano de **serviços de IA do Azure**. Você será levado a uma página para criar um recurso de **serviços de IA do Azure**. Configure-o com as seguintes configurações:
+
+* **Assinatura**: sua assinatura do Azure.
+* **Grupo de recursos**: o mesmo grupo de recursos que seu recurso de Pesquisa de IA do Azure.
+* **Região**: o mesmo local que seu recurso de Pesquisa de IA do Azure.
+* **Nome**: Um nome exclusivo.
+* **Nível de preços**: Standard S0
+**Ao marcar esta caixa reconheço que li e compreendi todos os termos abaixo**: Selecionado
+
+2.Selecione **Revisar + criar**. Depois de ver a resposta Validação aprovada, selecione Criar.
+
+3. Aguarde a conclusão da implantação e exiba os detalhes da implantação.
+
+## Criar uma conta de armazenamento
+
+1.Retorne à home page do portal do Azure e selecione o botão + Criar um recurso.
+
+2. Procure uma conta de armazenamento e crie um recurso de conta de armazenamento com as seguintes configurações:
+
+* **Assinatura**: _sua assinatura do Azure_.
+* **Grupo de recursos**: _o mesmo grupo de recursos que os recursos da Pesquisa de IA do Azure e dos serviços de IA do Azure_.
+* **Nome da conta de armazenamento**: _um nome exclusivo_.
+* **Localização**: Escolha qualquer local disponível.
+* **Desempenho**: Standard
+* **Redundância**: Armazenamento localmente redundante (LRS)
+  
+3. Clique em **Rever** e, em seguida, clique em **Criar**. Aguarde a conclusão da implantação e vá para o recurso implantado.
+
+4. Na conta de Armazenamento do Azure que você criou, no painel de menu esquerdo, selecione **Configuração** (em **Configurações**).
+
+5. Altere a configuração de _Permitir acesso anônimo de Blob_ para **Habilitado** e selecione **Salvar**.
