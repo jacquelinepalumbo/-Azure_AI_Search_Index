@@ -74,3 +74,32 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 4. Na conta de Armazenamento do Azure que você criou, no painel de menu esquerdo, selecione **Configuração** (em **Configurações**).
 
 5. Altere a configuração de _Permitir acesso anônimo de Blob_ para **Habilitado** e selecione **Salvar**.
+
+# Carregar documentos no Armazenamento do Azure
+
+1. No painel de menu esquerdo, selecione **Contêineres**.
+
+![image](https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/185b09da-6f13-4802-a924-7a90d53cd56b)
+
+
+2. Selecione **+ Contêiner**. Um painel do lado direito é aberto.
+
+3. Insira as seguintes configurações e clique em **Criar**:
+
+* **Nome**: café-comentários
+* **Nível de acesso público**: Contêiner (acesso de leitura anônimo para contêineres e blobs)
+* **Avançado: sem alterações**.
+
+4. Em uma nova guia do navegador, baixe as revisões de café compactadas do e extraia os arquivos para a pasta _de comentários_.`https://aka.ms/mslearn-coffee-reviews`
+
+5. No portal do Azure, selecione seu contêiner de _avaliações de café_. No contêiner, selecione **Carregar**.
+
+![image](https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/fc1aac1c-4535-47fb-8f6e-d8364606a93e)
+
+6. No painel **Carregar blob**, selecione **Selecionar um arquivo**.
+
+7. Na janela do Explorer, selecione **todos os** arquivos na pasta de _comentários_, selecione **Abrir** e selecione **Carregar**.
+
+![image](https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/68084cfe-d41f-4200-9ec9-7c3163cb31e3)
+
+8. Depois que o carregamento for concluído, você poderá fechar o painel **Carregar blob**. Seus documentos agora estão em seu recipiente de armazenamento de _revisões de café_.
