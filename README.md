@@ -192,6 +192,76 @@ Uma configuração para _Nome do contêiner_ com as exibições preenchidas auto
 
 Use o Gerenciador de pesquisa para escrever e testar consultas. O explorador de pesquisa é uma ferramenta incorporada no portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Gerenciador de Pesquisa para escrever consultas e revisar resultados em JSON.
 
-1. Na página Visão geral do serviço de Pesquisa, selecione Gerenciador de pesquisa na parte superior da tela.
+1. Na página _Visão geral_ do serviço de Pesquisa, selecione **Gerenciador de pesquisa** na parte superior da tela.
+
+<img width="500" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/5d9a108f-6726-4911-be24-52e8fe6cc51f">
+
+2. Observe como o índice selecionado é o _índice de café_ que você criou. Abaixo do índice selecionado, altere a exibição para **JSON view**.
+
+<img width="506" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/a915c153-e0e7-49a6-93cc-95c3b7a2e037">
+
+No campo **Editor de consultas JSON**, copie e cole:
+
+``{
+    "search": "*",
+    "count": true
+}``
+
+1. Selecione **Pesquisar**. A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo **@odata.count**. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
+
+2. Agora vamos filtrar por localização. No campo **Editor de consultas JSON**, copie e cole:
+
+``{
+ "search": "locations:'Chicago'",
+ "count": true
+}``
+
+3. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra por revisões com um local de Chicago. Você deve ver no campo. ``1@odata.count``
+
+4. Agora vamos filtrar por sentimento. No campo **Editor de consultas JSON**, copie e cole:
+
+``{
+ "search": "sentiment:'negative'",
+ "count": true
+}``
+
+5. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra por avaliações com um sentimento negativo. Você deve ver no campo. ``1@odata.count``
+
+6. Um dos problemas que podemos querer resolver é por que pode haver certas revisões. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. O que você acha que pode ser a causa da revisão?
+
+# Revisar o repositório de conhecimento
+
+Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o _assistente Importar dados_, você também criou um repositório de conhecimento. Dentro da loja de conhecimento, você encontrará os dados enriquecidos extraídos pelas habilidades de IA persistem na forma de projeções e tabelas.
+
+1. No portal do Azure, navegue de volta para sua conta de armazenamento do Azure.
+
+2. No painel de menu esquerdo, selecione **Contêineres**. Selecione o contêiner **de armazenamento de conhecimento**.
+
+ <img width="506" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/3c80d208-4a8c-47d0-81a4-d0672bee9b58">
+
+3. Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
+
+<img width="506" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/01b302ed-dfa8-4090-ab82-0bf691722632">
 
 
+4. Selecione  **Editar ** para ver o JSON produzido para um dos documentos do armazenamento de dados do Azure.
+
+<img width="599" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/3e643759-7a97-415f-bc7c-60f269a62f37">
+
+5. Selecione a trilha de blob de armazenamento no canto superior esquerdo da tela para retornar aos _Contêineres_ da conta de armazenamento.
+
+<img width="693" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/4c57d1bf-1432-4874-81f7-978ffb5d0bf7">
+
+6. Em _Contêineres_, selecione o contêiner _coffee-skillset-image-projection_. Selecione qualquer um dos itens.
+<img width="572" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/a6a99dea-fe0d-4a93-870d-3ba84b99cc46">
+
+
+7. Selecione qualquer um dos _.jpg arquivos_. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
+<img width="581" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/b7725f05-27d0-420c-bbe6-da5182b4b665">
+
+
+8. Selecione a trilha de blob de armazenamento no canto superior esquerdo da tela para retornar aos _Contêineres_ da conta de armazenamento.
+
+9. Selecione **Navegador de armazenamento** no painel esquerdo e selecione **Tabelas**. Há uma tabela para cada entidade no índice. Selecione a tabela _coffeeSkillsetKeyPhrases_.
+
+Veja as frases-chave que a loja de conhecimento conseguiu capturar do conteúdo das avaliações. Muitos dos campos são chaves, portanto, você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
