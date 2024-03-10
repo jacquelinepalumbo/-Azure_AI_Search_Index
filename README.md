@@ -145,3 +145,53 @@ Depois de ter os documentos em armazenamento, você pode usar o Azure AI Search 
 |Detectar sentimento          |     |		sentimento|
 |Gerar tags a partir de imagens |   |	imageTags|
 |Gerar legendas a partir de imagens | |		imageCaption|
+
+6. Em **Salvar enriquecimentos em um repositório de conhecimento**, selecione:
+
+* Projeções de imagens
+* Documentos
+* Páginas
+* Frases-chave
+* Entidades
+* Detalhes da imagem
+* Referências de imagens
+
+7. Selecione **Projeções de blob do Azure**: Documento. 
+Uma configuração para _Nome do contêiner_ com as exibições preenchidas automaticamente pelo contêiner do _repositório de conhecimento_. Não altere o nome do contêiner.
+
+8. Selecione **Avançar: Personalizar índice de destino. Altere o nome do índice** para **coffee-index**.
+
+9. Verifique se a **chave** está definida como **metadata_storage_path**. Deixe **o nome do Sugeridor** em branco e **o modo de Pesquisa** preenchido automaticamente.
+
+10. Revise as configurações padrão dos campos de índice. Selecione **filtrável** para todos os campos que já estão selecionados por padrão.
+
+<img width="679" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/787a2a2d-e61c-4207-b4bb-a1525e75513f">
+
+
+11. Selecione **Avançar: Criar um indexador**.
+
+12. **Altere o nome do indexador** para **coffee-indexer**.
+
+13. Deixe a **Agenda** definida como **Uma vez**.
+
+14. Expanda as **opções Avançadas**. Verifique se a opção **Base-64 Encode Keys** está selecionada, pois as chaves de codificação podem tornar o índice mais eficiente.
+
+15. Selecione **Enviar** para criar a fonte de dados, o conjunto de habilidades, o índice e o indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
+    
+* Extrai os campos de metadados do documento e o conteúdo da fonte de dados.
+* Executa o conjunto de habilidades cognitivas para gerar campos mais enriquecidos.
+* Mapeia os campos extraídos para o índice.
+
+16. Retorne à página de recursos da Pesquisa de IA do Azure. No painel esquerdo, em **Gerenciamento de Pesquisa**, selecione **Indexadores**. Selecione o **indexador de café recém-criado**. Aguarde um minuto e selecione **&orarr; Atualize** até que o **Status** indique êxito.
+
+17. Selecione o nome do indexador para ver mais detalhes.
+
+<img width="450" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/ce66430e-50bd-4075-895f-70a8c8b6c703">
+
+# Consultar o índice
+
+Use o Gerenciador de pesquisa para escrever e testar consultas. O explorador de pesquisa é uma ferramenta incorporada no portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Gerenciador de Pesquisa para escrever consultas e revisar resultados em JSON.
+
+1. Na página Visão geral do serviço de Pesquisa, selecione Gerenciador de pesquisa na parte superior da tela.
+
+
