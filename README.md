@@ -25,7 +25,7 @@ A solução que você criará para o Fourth Coffee requer os seguintes recursos 
 
 ## Criar um recurso de _Pesquisa de IA do Azure_
 
-1. Entre no [portal do Azure](https://login.microsoftonline.com/).
+1. Entre no [portal do Azure](https://portal.azure.com/?azure-portal=true#home).
 
 2. Clique no botão **+ Criar um recurso**, procure Pesquisa de IA do Azure e crie um recurso **de Pesquisa de IA do Azure** com as seguintes configurações:
 
