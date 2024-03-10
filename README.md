@@ -216,6 +216,13 @@ No campo **Editor de consultas JSON**, copie e cole:
  "count": true
 }``
 
+_O gerenciador de pesquisa retorna as avaliações pela localidade, no caso, Chigado. Onde podemos analisar todas as interações dos usuários pela região_:
+
+<img width="797" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/1b0010ff-fbd8-42d9-97e7-9604391242ac">
+
+
+
+
 3. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra por revisões com um local de Chicago. Você deve ver no campo. ``1@odata.count``
 
 4. Agora vamos filtrar por sentimento. No campo **Editor de consultas JSON**, copie e cole:
