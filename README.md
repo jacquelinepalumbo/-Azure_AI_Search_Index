@@ -138,13 +138,7 @@ Depois de ter os documentos em armazenamento, você pode usar o Azure AI Search 
 * Não selecione _Habilitar enriquecimento incremental_
 * Selecione os seguintes campos enriquecidos:
 
-| Habilidade Cognitiva | Parâmetro | Nome do campo |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
-
-
-|Habilidade Cognitiva              |	|Parâmetro|	|Nome do campo|
+| Habilidade Cognitiva           	| Parâmetro 	| Nome do campo |
 | --- | --- |
 |Extrair nomes de locais           |	|         |	|Locais|
 |Extrair frases-chave              |	|         | |Frases-chave|
