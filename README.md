@@ -138,10 +138,10 @@ Depois de ter os documentos em armazenamento, você pode usar o Azure AI Search 
 * Não selecione _Habilitar enriquecimento incremental_
 * Selecione os seguintes campos enriquecidos:
 
-| Habilidade Cognitiva           	| Parâmetro 	| Nome do campo |
+| Habilidade Cognitiva | Parâmetro | Nome do campo |
 | --- | --- |
-|Extrair nomes de locais           |	|         |	|Locais|
-|Extrair frases-chave              |	|         | |Frases-chave|
-|Detectar sentimento               |	|         |	|sentimento|
-|Gerar tags a partir de imagens    |	|         |	|imageTags|
-|Gerar legendas a partir de imagens|	|         |	|imageCaption|
+|Extrair nomes de locais           |		Locais|
+|Extrair frases-chave              |	 Frases-chave|
+|Detectar sentimento               |		sentimento|
+|Gerar tags a partir de imagens    |	imageTags|
+|Gerar legendas a partir de imagens|		imageCaption|
