@@ -103,3 +103,37 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 ![image](https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/68084cfe-d41f-4200-9ec9-7c3163cb31e3)
 
 8. Depois que o carregamento for concluído, você poderá fechar o painel **Carregar blob**. Seus documentos agora estão em seu recipiente de armazenamento de _revisões de café_.
+
+# Indexar os documentos
+
+Depois de ter os documentos em armazenamento, você pode usar o Azure AI Search para extrair insights dos documentos. O portal do Azure fornece um _assistente de Importação de dados_. Com esse assistente, você pode criar automaticamente um índice e um indexador para fontes de dados com suporte. Você usará o assistente para criar um índice e importar seus documentos de pesquisa do armazenamento para o índice de Pesquisa de IA do Azure.
+
+1. No portal do Azure, navegue até seu recurso de Pesquisa de IA do Azure. Na página **Visão geral**, selecione **Importar dados**.
+
+<img width="737" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/56838a41-8e92-4bc6-ac1f-a045f8ea2525">
+
+2. Na página **Conectar aos seus dados**, na lista **Fonte de Dados**, selecione **Armazenamento de Blobs do Azure**. Conclua os detalhes do armazenamento de dados com os seguintes valores:
+   
+* **Fonte de dados**: Armazenamento de Blobs do Azure
+* **Nome da fonte de dados**: coffee-customer-data
+* **Dados a serem extraídos**: conteúdo e metadados
+* **Modo de análise**: Padrão
+* **Cadeia de conexão**: *Selecione **Escolher uma conexão existente**. Selecione sua conta de armazenamento, selecione o contêiner **de revisões de café** e clique em **Selecionar**.
+* **Autenticação de identidade gerenciada**: Nenhuma
+* **Nome do contêiner**: essa configuração é preenchida automaticamente depois que você escolhe uma conexão existente.
+* **Pasta Blob**: deixe isso em branco.
+* **Descrição**: Comentários a Fourth Coffee shops.
+
+3. Selecione **Avançar: Adicionar habilidades cognitivas (Opcional)**.
+
+4. Na seção **Anexar Serviços Cognitivos**, selecione seu recurso de serviços de IA do Azure.
+
+5. Na seção **Adicionar enriquecimentos**:
+
+* Altere o **nome do Skillset** para **coffee-skillset**.
+* Marque a caixa **de seleção Habilitar OCR e mesclar todo merged_content texto em campo**.
+
+* Verifique se o **campo Dados de origem** está definido como **merged_content**.
+* Altere o **nível de granularidade de enriquecimento** para **Páginas (blocos de 5000 caracteres**).
+* Não selecione _Habilitar enriquecimento incremental_
+* Selecione os seguintes campos enriquecidos:
