@@ -86,7 +86,7 @@ Você precisará provisionar um recurso **de serviços de IA do Azure** que este
 
 3. Insira as seguintes configurações e clique em **Criar**:
 
-* **Nome**: café-comentários
+* **Nome**: coffee-reviews
 * **Nível de acesso público**: Contêiner (acesso de leitura anônimo para contêineres e blobs)
 * **Avançado: sem alterações**.
 
