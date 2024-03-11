@@ -271,9 +271,21 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o _ass
 7. Selecione qualquer um dos _.jpg arquivos_. Selecione **Editar** para ver a imagem armazenada do documento. Observe como todas as imagens dos documentos são armazenadas dessa maneira.
 <img width="581" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/b7725f05-27d0-420c-bbe6-da5182b4b665">
 
+<img width="877" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/0f4d3f4c-68cd-49b3-9025-3e18845ae790">
+
 
 8. Selecione a trilha de blob de armazenamento no canto superior esquerdo da tela para retornar aos _Contêineres_ da conta de armazenamento.
 
 9. Selecione **Navegador de armazenamento** no painel esquerdo e selecione **Tabelas**. Há uma tabela para cada entidade no índice. Selecione a tabela _coffeeSkillsetKeyPhrases_.
 
 Veja as frases-chave que a loja de conhecimento conseguiu capturar do conteúdo das avaliações. Muitos dos campos são chaves, portanto, você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
+
+_Ao gerar uma aplicação em que você consegue gerar sentiementos, análises, localicação. Referindo-se a palavras chaves. Podemos tirar insights valioso, a partir dos relatos dos usuários, imagens postadas, etc. Para empresa, terá umvalor agregado em análise de satisfação do cliente, podendo ser aplicado técnicas para melhorar a experiência do usuário._
+
+
+# Referências:
+
+
+[Explore an Azure AI Search index (UI)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html)
+
+&nbsp;
