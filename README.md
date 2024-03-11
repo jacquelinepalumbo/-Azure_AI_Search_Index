@@ -232,6 +232,11 @@ _O gerenciador de pesquisa retorna as avaliações pela localidade, no caso, Chi
  "count": true
 }``
 
+_O gerenciador nos mostra os usuários que ficaram insatisfeitos com o serviço prestado na cafeteria:_
+<img width="714" alt="image" src="https://github.com/jacquelinepalumbo/-Azure_AI_Search_Index/assets/119548193/4719a912-39bd-4dde-9ee1-d3176547aac5">
+
+
+
 5. Selecione **Pesquisar**. A consulta pesquisa todos os documentos no índice e filtra por avaliações com um sentimento negativo. Você deve ver no campo. ``1@odata.count``
 
 6. Um dos problemas que podemos querer resolver é por que pode haver certas revisões. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. O que você acha que pode ser a causa da revisão?
